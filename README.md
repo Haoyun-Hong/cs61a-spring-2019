@@ -6,6 +6,7 @@ MWF 2-3 in Wheeler Auditorium
 
 https://cs61a.org/
 
-#Status: 
+## Progress Status:
+lecture 02 completed 
 lab00 completed 
 hwk01 completed (review Q4)
