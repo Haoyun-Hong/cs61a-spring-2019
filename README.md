@@ -6,7 +6,7 @@ Instructor: Dan Garcia
 
 MWF 2-3 in Wheeler Auditorium
 
-# Course Material: 
+## Course Material: 
 Course Website: https://cs61a.org/
 
 Online Textbook: Composing Programs: http://composingprograms.com/
