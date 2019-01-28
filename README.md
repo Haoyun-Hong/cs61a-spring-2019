@@ -13,9 +13,10 @@ Online Textbook: Composing Programs: http://composingprograms.com/
 
 
 ## Progress Status:
-lecture 02 completed 
+lecture 03 completed 
 
-lab00 completed 
+lab01 completed 
 
 hwk01 completed (review Q4)
 
+hog project released
