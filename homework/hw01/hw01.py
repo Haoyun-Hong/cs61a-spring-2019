@@ -32,6 +32,8 @@ def two_of_three(a, b, c):
     50
     """
     return max(a,b,c) * max(a, b, c)+ (a+b+c-max(a, b, c)-min(a, b,c))*(a+b+c-max(a, b, c)-min(a, b,c))
+    # can become simpler 
+    # return a**2+b**2+c**2-min(a,b,c)**2
 
 # Q3
 def largest_factor(n):
@@ -96,6 +98,7 @@ def with_if_function():
 def c():
     "*** YOUR CODE HERE ***"
     return 1==2
+    # as long as return False
 
 def t():
     "*** YOUR CODE HERE ***"
@@ -138,4 +141,16 @@ def hailstone(n):
             count+=1
     print(n)
     return count+1
+
+    #After Don't repeat yourself 
+    #count=1
+    #while n is not 1:
+    #    print(n)
+    #    if n%2 ==0:
+    #        n =n //2
+    #    else:
+    #        n=3*n+1
+    #    count += 1
+    #print(n)
+    #return count
     
