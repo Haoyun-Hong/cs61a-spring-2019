@@ -13,7 +13,7 @@ Online Textbook: Composing Programs: http://composingprograms.com/
 
 
 ## Progress Status:
-lecture 06 completed
+lecture 08 completed
 
 lab02 completed
 
