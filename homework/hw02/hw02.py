@@ -97,6 +97,16 @@ def accumulate(combiner, base, n, term):
         i += 1
     return result
 
+    # Recursive solution 
+    if n==0:
+        return base
+    return combiner(term(n), accumulate(combiner, base, n-1, term))
+
+    # Alternative recursive solution 
+    if n==0:
+        return base 
+    return accumulate(combiner, combiner(base, term(n)), n-1, term)
+
 def summation_using_accumulate(n, term):
     """Returns the sum of term(1) + ... + term(n). The implementation
     uses accumulate.
