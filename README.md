@@ -17,6 +17,6 @@ lecture 12 completed
 
 lab04 completed
 
-hwk02 completed
+hwk03 completed
 
 hog project completed (review Q8)
