@@ -76,14 +76,16 @@ def pingpong(n):
     "*** YOUR CODE HERE ***"
     # great example, be sure to review 
     # A tree recursion way of writing (cannot pass the tests because of time limits)
-    #if n==1:
-    #    return 1
-    #elif n==2:
-    #    return 2
-    #elif (n-1)%7==0 or has_seven(n-1):
-    #    return pingpong(n-2)
-    #else:
-    #   return 2*pingpong(n-1)-pingpong(n-2)
+    if n==1:
+        return 1
+    elif n==2:
+        return 2
+    elif (n-1)%7==0 or has_seven(n-1):
+        return pingpong(n-2)
+    else:
+       return 2*pingpong(n-1)-pingpong(n-2)
+
+
     def helper(k, i, increment):
         if n==k:
             return i
@@ -91,6 +93,7 @@ def pingpong(n):
             return helper(k+1, i-increment, -increment)
         return helper(k+1, i+increment, increment)
     return helper(1,1,1)
+    # i is simialr to the value of result, increment and -increment measures the direction 
 
 
 
@@ -158,6 +161,10 @@ def squares(s):
             if x*x==i:
                 result += [x]
     return result 
+    # Using list comprehension version (one line statement)
+    return [round(n ** 0.5) for n in s if n == round(n ** 0.5) ** 2]
+    # The filter condition: n== round(n**0.5)**2 ensures that n is a perfect square itself 
+    # A very smart trick
 
 
 
@@ -190,6 +197,17 @@ def count_change(amount):
         else:
             return helper(amount-2**k, k)+helper(amount, k-1)
     return helper(amount, int(log2(amount)))
+
+    # A solution version without using log2
+    def contrained_count(amount, smallest_coin):
+        if amount==0:
+            return 1
+        if smallest_coin > amount:
+            return 0
+        without_coin =constrained_count(amount, smallest_coin * 2) # the number ways to constitute amount without using the smallest_coin
+        with_cooin= contrained_count(amount-smallest_coin, smallest_coin)
+        return without_coin + with_coin # the total number of ways could divide into two separate conditions 
+    return contrained_count(amount,1 )
     
 
 
@@ -228,7 +246,7 @@ def move_stack(n, start, end):
     "*** YOUR CODE HERE ***"
     if n==1:
         print_move(start, end)
-    elif n==2:
+    elif n==2: # The case of n==2 is helpful to think about, but is not necessary in this case. 
         print_move(start, 6-start-end)
         print_move(start, end)
         print_move(6-start-end, end)
@@ -236,6 +254,7 @@ def move_stack(n, start, end):
         move_stack(n-1, start, 6-start-end)
         move_stack(1, start, end)
         move_stack(n-1, 6-start-end, end)
+       
 
 ###################
 # Extra Questions #
