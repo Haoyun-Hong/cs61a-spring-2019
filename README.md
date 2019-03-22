@@ -13,9 +13,9 @@ Online Textbook: Composing Programs: http://composingprograms.com/
 
 
 ## Progress Status:
-lecture 20 completed
+lecture 24 completed
 
-lab07 completed
+lab08 completed
 
 hwk06 completed
 
